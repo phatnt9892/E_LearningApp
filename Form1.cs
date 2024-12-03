@@ -64,8 +64,6 @@ namespace E_learning
             try
             {
                 connection.Open();
-                string query = "SELECT * FROM Users"; // Adjust for the table to reload
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
 

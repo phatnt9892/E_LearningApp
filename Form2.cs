@@ -59,27 +59,6 @@ namespace E_learning
             adapter.UpdateCommand = builder.GetUpdateCommand(); // Generate dynamic update command
             adapter.InsertCommand = builder.GetInsertCommand(); // Generate dynamic insert command
             adapter.DeleteCommand = builder.GetDeleteCommand(); // Generate dynamic delete command
-            /* Update command
-            adapter.UpdateCommand = new MySqlCommand(
-                $"UPDATE {tableName} SET Name = @Name, Email = @Email, Password = @Password, Role = @Role WHERE UserID = @UserID", connection);
-            adapter.UpdateCommand.Parameters.Add("@Name", MySqlDbType.VarChar, 100, "Name");
-            adapter.UpdateCommand.Parameters.Add("@Email", MySqlDbType.VarChar, 100, "Email");
-            adapter.UpdateCommand.Parameters.Add("@Password", MySqlDbType.VarChar, 255, "Password");
-            adapter.UpdateCommand.Parameters.Add("@Role", MySqlDbType.Enum, 50, "Role");
-            adapter.UpdateCommand.Parameters.Add("@UserID", MySqlDbType.Int32, 11, "UserID");
-
-            // Insert command
-            adapter.InsertCommand = new MySqlCommand(
-                $"INSERT INTO {tableName} (Name, Email, Role) VALUES (@Name, @Email, @Role)", connection);
-            adapter.InsertCommand.Parameters.Add("@Name", MySqlDbType.VarChar, 100, "Name");
-            adapter.InsertCommand.Parameters.Add("@Email", MySqlDbType.VarChar, 100, "Email");
-            adapter.InsertCommand.Parameters.Add("@Password", MySqlDbType.VarChar, 255, "Password");
-            adapter.InsertCommand.Parameters.Add("@Role", MySqlDbType.Enum, 50, "Role");
-
-             Delete command
-            adapter.DeleteCommand = new MySqlCommand(
-                $"DELETE FROM {tableName} WHERE UserID = @UserID", connection);
-            adapter.DeleteCommand.Parameters.Add("@UserID", MySqlDbType.Int32, 11, "UserID"); */
         }
 
         private void LoadTableData(string tableName)
@@ -100,7 +79,7 @@ namespace E_learning
         }
 
         // Event: Save changes to the database
-        private void btnSaveChanges_Click(object sender, EventArgs e)
+        private void btnSaveChanges_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -136,7 +115,7 @@ namespace E_learning
             {
                 form1.ReloadData(); // Call a method in Form1 to reload data
                 form1.Show();       // Show Form1
-                this.Hide();         // Hide Form2
+                this.Hide();        // Hide Form2
             }
         }
     }

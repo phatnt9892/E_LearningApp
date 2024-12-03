@@ -47,7 +47,7 @@ namespace E_learning
             this.cbTableList.Name = "cbTableList";
             this.cbTableList.Size = new System.Drawing.Size(121, 21);
             this.cbTableList.TabIndex = 0;
-            cbTableList.SelectedIndexChanged += new EventHandler(cbTableList_SelectedIndexChanged);
+            this.cbTableList.SelectedIndexChanged += new System.EventHandler(this.cbTableList_SelectedIndexChanged);
             // 
             // btnSaveChanges
             // 
@@ -57,6 +57,7 @@ namespace E_learning
             this.btnSaveChanges.TabIndex = 1;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click_1);
             // 
             // dataGridView2
             // 
@@ -65,9 +66,6 @@ namespace E_learning
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(776, 379);
             this.dataGridView2.TabIndex = 2;
-            this.dataGridView2.ReadOnly = false;
-            this.dataGridView2.AllowUserToAddRows = true;
-            this.dataGridView2.AllowUserToDeleteRows = true;
             // 
             // button1
             // 
